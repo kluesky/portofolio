@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kyluesky — Portofolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: transform 0.3s ease;
+      overflow: hidden;
+    }
+    .gallery-card:hover {
+      transform: scale(1.05);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+    }
+    .gallery-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #93c5fd;
+      padding: 1rem;
+    }
+    .gallery-card p {
+      font-size: 0.875rem;
+      color: #d1d5db;
+      padding: 0 1rem 1rem;
+    }
+  </style>
+</head>
+<body class="text-white bg-overlay min-h-screen transition duration-500">  <!-- Dark Mode Toggle -->  <div class="fixed top-4 right-4 z-50">
+    <button id="toggleDark" class="bg-white/10 border border-white text-white px-3 py-2 rounded-full shadow hover:scale-105 transition">
+      🌙
+    </button>
+  </div>  <!-- HERO Section -->  <header class="text-center py-24 px-6 fade-up">
+    <img src="https://files.catbox.moe/av066j.jpg" alt="Kyluesky" class="w-32 h-32 rounded-full border-4 border-blue-400 mx-auto shadow-lg mb-6"/>
+    <h1 class="text-4xl font-bold text-blue-400">Kyluesky</h1>
+    <p class="text-lg mt-2 text-gray-300">Bot Dev | Front-end Web | AI & Tech Enthusiast</p>
+  </header>  <!-- Navigation -->  <nav class="flex justify-center gap-6 py-4 bg-white/10 backdrop-blur-md text-sm font-semibold border-t border-b border-white/10">
+    <a href="#tentang" class="hover:text-blue-400">Tentang</a>
+    <a href="#portofolio" class="hover:text-blue-400">Portofolio</a>
+    <a href="#kontak" class="hover:text-blue-400">Kontak</a>
+  </nav>  <!-- Sections -->  <section id="tentang" class="max-w-3xl mx-auto px-6 py-20 fade-up">
+    <h2 class="text-3xl font-bold text-blue-300 mb-4">Tentang Saya</h2>
+    <p class="text-gray-200 leading-relaxed">
+      🌟 Aku adalah pengembang web & bot AI yang berfokus pada menciptakan pengalaman pengguna yang modern, intuitif, dan tentunya menyenangkan~! Dengan sentuhan desain yang fresh dan teknologi AI yang cerdas, aku siap membawamu ke dunia digital yang lebih seru dan interaktif~ 💬💖
+    </p>
+    <a href="cv-kyluesky.pdf" download
+   class="inline-block px-4 py-2 bg-white/10 border border-white/20 text-white rounded-lg shadow hover:bg-white/20 backdrop-blur transition">
+  📥 Unduh CV (PDF)
+</a>
+<!-- Status Card -->
+<div class="max-w-md mx-auto mt-10 bg-white/5 backdrop-blur border border-white/20 rounded-xl p-4 text-white shadow-lg">
+  <div class="flex items-center gap-4">
+    <img src="https://files.catbox.moe/wlge06.jpg" alt="Chisato" class="w-16 h-16 rounded-full border border-blue-300" />
+    <div>
+      <h3 class="text-lg font-bold text-blue-300">Chisato AI</h3>
+      <p class="text-xs text-gray-300 italic">AI Companion • Support Type</p>
+    </div>
+  </div>
+
+  <div class="mt-4 space-y-2 text-sm">
+    <div>
+      ❤️ HP: <span id="hpText">82 / 100</span>
+      <div class="h-2 w-full bg-red-900/40 relative overflow-hidden rounded">
+        <div id="hpBar" class="absolute left-0 top-0 h-full bg-red-400 transition-all duration-300" style="width: 82%"></div>
+      </div>
+    </div>
+    <div>
+      🔷 Mana: <span id="manaText">50 / 100</span>
+      <div class="h-2 w-full bg-blue-900/40 relative overflow-hidden rounded">
+        <div id="manaBar" class="absolute left-0 top-0 h-full bg-blue-400 transition-all duration-300" style="width: 50%"></div>
+      </div>
+    </div>
+    <div>
+      💫 Mood: <span id="moodText">Senang</span>
+      <div class="h-2 w-full bg-purple-900/40 relative overflow-hidden rounded">
+        <div id="moodBar" class="absolute left-0 top-0 h-full bg-purple-400 transition-all duration-300" style="width: 75%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>  <section id="portofolio" class="max-w-6xl mx-auto px-6 py-20 fade-up">
+    <h2 class="text-3xl font-bold text-blue-300 text-center mb-10">Portofolio</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Project 1 -->
+      <div class="gallery-card">
+        <img src="https://files.catbox.moe/i491g6.jpg" alt="Bot WhatsApp AI">
+        <h3>Bot WhatsApp AI</h3>
+        <p>✨ Bot imut nan cerdas hadir untukmu~! Dengan kekuatan AI yang pintar, menu interaktif yang memanjakan mata, dan integrasi penuh dengan Telegram, aku siap menemani harimu dan membantumu dengan senyuman~ (≧◡≦) ♡</p>
+      </div><!-- Project 2 -->
+  <div class="gallery-card">
+    <img src="https://files.catbox.moe/lqul8d.jpg" alt="Website Mabar MLBB">
+    <h3>Website Mabar MLBB</h3>
+    <p>🎮 Selamat datang di situs pendaftaran tim MLBB dengan tampilan interaktif nan cantik~! Desainnya dihiasi efek parallax yang halus dan animasi hover yang responsif, siap membuat pengalaman registrasi timmu makin menyenangkan~ ✨🌈</p>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="gallery-card">
+    <img src="https://files.catbox.moe/5u7pmx.jpg" alt="Bot Telegram RPG">
+    <h3>Bot Telegram RPG</h3>
+    <p>🌟 Game RPG waifu di Telegram yang penuh petualangan dan kejutan manis~! Masuki dungeon misterius, kumpulkan waifu favoritmu, dan tantang pemain lain dalam PvP seru! Jangan lupa panjat leaderboard dan jadilah legenda para waifu master~ 💌🏆</p>
+  </div>
+</div>
+
+  </section>  <section id="kontak" class="max-w-3xl mx-auto px-6 py-20 fade-up">
+    <h2 class="text-3xl font-bold text-blue-300 mb-4">Kontak</h2>
+    <ul class="space-y-2 text-gray-200">
+      <li>📧 Email: <a href="mailto:kyluesky@domain.com" class="text-blue-400 underline">kyluesky@domain.com</a></li>
+      <li>📸 Instagram: <a href="https://instagram.com/me_kyluesky" class="text-blue-400 underline">@me_kyluesky</a></li>
+      <li>💬 WhatsApp: <a href="https://wa.me/6281234567890" class="text-blue-400 underline">+62 812-3456-7890</a></li>
+    </ul>
+  </section>  <!-- Footer -->  <footer class="text-center py-6 text-gray-400 text-sm border-t border-white/10">
+    &copy; 2025 Kyluesky. All rights reserved.
+  </footer> 
+  <!-- Testimoni Slider -->
+<section id="testimoni" class="max-w-3xl mx-auto px-6 py-20 fade-up">
+  <h2 class="text-3xl font-bold text-blue-300 mb-6 text-center">Testimoni</h2>
+  <div class="relative bg-white/5 p-6 rounded-xl border border-white/20 backdrop-blur shadow-lg overflow-hidden">
+    <p id="testiText" class="text-lg italic text-gray-100 transition-opacity duration-500">
+      "Bot ini kawaii banget dan responsif! Aku merasa ngobrol sama waifu beneran~ 💖" — *Aiko, Gamer Otaku*
+    </p>
+    <div class="mt-4 text-right text-sm text-blue-200" id="testiAuthor">— Aiko, Gamer Otaku</div>
+  </div>
+</section><!-- Scripts -->  <script src="script.js"></script>  <script>
+    const cards = document.querySelectorAll('.gallery-card');
+    const fadeIn = () => {
+      const trigger = window.innerHeight * 0.9;
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < trigger) {
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    window.addEventListener('scroll', fadeIn);
+    window.addEventListener('load', fadeIn);
+  </script>
+  <!-- Visual Novel Mode Dialog -->
+<div id="vnDialog" class="fixed bottom-0 left-0 right-0 bg-black/60 text-white p-4 text-sm font-mono z-40 hidden transition-opacity duration-500">
+  <p><span class="text-pink-400">Chisato:</span> Hai onii-chan~! Mau aku bantu deploy project-mu hari ini? 💻</p>
+</div>
+  </body>
+</html>

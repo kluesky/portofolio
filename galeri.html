@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Proyek - Kyluesky</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-card {
+      @apply bg-white/10 rounded-xl shadow-lg backdrop-blur border border-white/20 transition-transform transform hover:scale-105 overflow-hidden;
+    }
+    .gallery-card img {
+      @apply w-full h-48 object-cover;
+    }
+    .gallery-card h3 {
+      @apply text-xl font-bold text-blue-300 p-4;
+    }
+    .gallery-card p {
+      @apply text-sm text-gray-300 px-4 pb-4;
+    }
+  </style>
+</head>
+<body class="bg-overlay min-h-screen text-white px-6 py-10">
+  <h1 class="text-4xl font-bold mb-6 text-center">Galeri Proyek Kyluesky</h1>  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Project 1 -->
+    <div class="gallery-card">
+      <img src="https://files.catbox.moe/x6kg74.jpg" alt="Bot WhatsApp AI">
+      <h3>Bot WhatsApp AI</h3>
+      <p>Bot pintar dengan fitur AI, menu interaktif, dan integrasi Telegram.</p>
+    </div><!-- Project 2 -->
+<div class="gallery-card">
+  <img src="https://files.catbox.moe/pwqkmo.jpg" alt="Website Mabar MLBB">
+  <h3>Website Mabar MLBB</h3>
+  <p>Situs pendaftaran tim MLBB dengan efek parallax dan animasi hover.</p>
+</div>
+
+<!-- Project 3 -->
+<div class="gallery-card">
+  <img src="https://files.catbox.moe/3x61xy.jpg" alt="Bot Telegram RPG">
+  <h3>Bot Telegram RPG</h3>
+  <p>Game RPG waifu di Telegram dengan dungeon, leaderboard, dan PvP.</p>
+</div>
+
+  </div>  <script>
+    // Fade-up saat scroll
+    const cards = document.querySelectorAll('.gallery-card');
+    const fadeIn = () => {
+      const trigger = window.innerHeight * 0.9;
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < trigger) {
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    window.addEventListener('scroll', fadeIn);
+    window.addEventListener('load', fadeIn);
+  </script></body>
+</html>

@@ -1,0 +1,78 @@
+/* Background dan tampilan utama */
+body {
+  background-image: url('https://files.catbox.moe/9n8wrx.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #0d0d0d;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.85); /* lebih gelap agar teks kontras */
+  backdrop-filter: blur(6px);
+}
+
+/* Kontras teks agar jelas */
+body, p, h1, h2, h3, h4, a, li, span {
+  color: #f8f8f8 !important;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Responsive teks */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  p, li, a { font-size: 1rem; }
+}
+
+/* Kartu portofolio */
+.card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 119, 255, 0.15);
+}
+
+/* Animasi muncul */
+.fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+#hpBar, #manaBar, #moodBar {
+  box-shadow: 0 0 4px rgba(255,255,255,0.4);
+}
+#testiText {
+  transition: opacity 0.4s ease-in-out;
+}
+#vnDialog {
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
