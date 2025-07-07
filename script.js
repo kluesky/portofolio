@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Bot WhatsApp AI',
       desc: 'Bot WhatsApp dengan fitur AI interaktif, perintah suara, menu dinamis, dan integrasi Telegram.',
       tools: 'Baileys, Node.js, OpenAI API',
-      link: 'https://wa.me/6281234567890'
+      link: 'https://wa.me/6287859822633'
     },
     mlbb: {
       title: 'Website Mabar MLBB',
